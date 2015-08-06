@@ -73,7 +73,7 @@ function createStoreDetail(store, location){
     var distance = Math.round(google.maps.geometry.spherical.computeDistanceBetween (locationLatLng, storeLatLng));
     detail += "<p>距離: "+ distance + "(m)</p>";
     detail += "<p>席数: " + storeCapacity + "</p>" ;
-    if((distance <30) && (!isCheckIn)) {
+    if((distance <150) && (!isCheckIn)) {
        detail += '<button onclick="checkIn(\'' + store.id + '\');">チェックイン!</button>';
     } else if (isCheckIn) {
        detail += '<button onclick="checkOut(\'' + isCheckIn + '\');">チェックアウト!</button>';
